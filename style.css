@@ -1,0 +1,240 @@
+* { 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+}
+
+body{
+    font-family: 'Noto Serif Display', serif;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    height: 100vh;
+}
+
+/* ----------------Gestion des côtés de page index ------------------ */
+
+.left {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    animation-name: left;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    background-color: #85c9994d;
+}
+
+.right {
+    flex: 1;
+    background-color: black;
+    transition: 1s;
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_1280.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header h1{
+    color: #0d4d22;
+    font-size: 40px;
+}
+
+.header h2 {
+    margin-top: 10px;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,0,0,.4);
+    margin-bottom: 10px;
+}
+
+form {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------------Bouton * ------------------ */
+
+form button{
+background-image: linear-gradient(to right, #1c6331  0%, #cebe62   51%, #1c6331   100%);
+margin: 10px;
+width: 340px;
+border: 0;
+padding: 12px 10px;
+text-align: center;
+text-transform: uppercase;
+transition: 0.5s;
+background-size: 200% auto;
+color: white;            
+border-radius: 3px;
+font-weight: 500;
+/* display: block; */
+letter-spacing: 2px;
+font-family: 'Noto Serif Display', serif;
+cursor: pointer
+}
+
+form button:hover {
+background-position: right center;
+color: #fff;
+text-decoration: none;
+}
+
+/* ----------------Animation de la page d'accueil ------------------ */
+
+.animation {
+    animation-name: move;
+    animation-duration: .4s;
+    animation-fill-mode: both;
+    animation-delay: 1.5s;
+}
+
+.a1 {
+    animation-delay: 1.5s;  
+}
+
+.a2 {
+    animation-delay: 1.6s;
+}
+
+.a3 {
+    animation-delay: 1.7s;
+}
+
+.a4 {
+    animation-delay: 1.8s;
+}
+
+.a5 {
+    animation-delay: 1.9s;
+}
+
+.a6 {
+    animation-delay: 2s;
+}
+
+@keyframes move {
+    0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+    }
+
+    100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    }
+}
+
+@keyframes left {
+    0% {
+    opacity: 0;
+    width: 0;
+    }
+
+    100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+    }
+}
+
+/* -----------------footer--------------- */
+
+#footer{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    left: 30%;
+    right: 30%;
+}
+
+/* -----------------header All view--------------- */
+
+.headerAllView{
+    text-align: center;
+}
+
+.headerAllView h2{
+    margin-top: 35px;
+}
+
+.boxAnimauxRaces{
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.itemsAnimauxRaces{
+    border: #0d4d22 2px solid;
+    width: 200px;
+    height: 400px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.categorieAnimale{
+    text-align: center;
+    color: #0d4d22;
+}
+
+.nomAnimal{
+    color: #cd701c;
+    font-weight: 600;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.infoAnimaux{
+    color: #cd701c;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.imageAnimaux{
+    width: 164px;
+    height: 298px;
+    max-height: 200px;
+}
+
+/* ---------------Get all view page ------------------- */
+
+input[type="text"]{
+    height: 46px;
+    padding: 0 16px;
+    border: 2px solid rgba(54, 50, 50, 0.384);
+    border-radius: 4px;
+    outline: 0;
+    transition: .2s;
+    width: 340px;
+}
+
+input[type="text"]:focus {
+    border-color: #0d4d22;
+    transition: 0.6s ease-in-out;
+}
+
+input[placeholder]{
+    font-family: 'Noto Serif Display', serif;
+}
+
+#form_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form_text label{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

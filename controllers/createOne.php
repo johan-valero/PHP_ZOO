@@ -1,7 +1,7 @@
 <?php
 include('../models/animaux.php');
 include('../config/bdd.php');
-include('../views/zoo.php');
+include('../views/getAllView.php');
 
 if (
     !empty($_POST['nom'])

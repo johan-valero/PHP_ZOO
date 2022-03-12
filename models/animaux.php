@@ -59,14 +59,28 @@ class Animaux {
         return $stmt;
     }
 
+    public function readAllAll(){
+        $myQuery = 'SELECT * FROM animaux JOIN races ON animaux.id_race = races.id_race';
+        $stmt = $this->connect->prepare($myQuery);
+        $stmt->execute();
+        return $stmt;
+    }
+
     public function readSingle(){
         $myQuery = 'SELECT * FROM animaux WHERE nom=:nom';
         $stmt = $this->connect->prepare($myQuery);
         $stmt->bindParam(':nom', $this->nom);
         $stmt->execute();
         return $stmt;
+    }
 
-}
+    public function readSingleAll(){
+        $myQuery = 'SELECT * FROM animaux JOIN races ON animaux.id_race = races.id_race WHERE nom=:nom';
+        $stmt = $this->connect->prepare($myQuery);
+        $stmt->bindParam(':nom', $this->nom);
+        $stmt->execute();
+        return $stmt;
+    }
 
     public function createOne(){
         $myQuery = 'INSERT INTO animaux 
@@ -79,13 +93,6 @@ class Animaux {
         $stmt->bindParam(':couleur', $this->couleur);
         $stmt->bindParam(':idRace', $this->idRace);
         return $stmt->execute();
-        /*return $stmt->execute(
-            array(
-                ':nom'=>$this->nom,
-                ':couleur'=> $this->couleur,
-                ':idRace'=> $this->idRace,
-            )
-            );*/
     }
 
     public function updateOne(){
@@ -114,6 +121,4 @@ class Animaux {
     }
 
 }
-
-
 ?>

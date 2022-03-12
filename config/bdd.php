@@ -5,7 +5,7 @@ class ConfigDB
     private $host = 'localhost';
     private $database_name = 'animaux';
     private $username = 'root';
-    private $password = 'root';
+    private $password = '';
 
     public $connect;
 
@@ -27,4 +27,3 @@ class ConfigDB
         return $this->connect;
     }
 }
-
