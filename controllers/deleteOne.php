@@ -10,16 +10,22 @@ if (!empty($_POST['name'])){
     $animaux = new Animaux();
     $animaux->setNom($name);
     
-    $OneAnimal = $animaux->readSingle();
+    $OneAnimal = $animaux->readSingleAll();
+    echo '<div class="boxAnimaux"> ';
     while($donnees = $OneAnimal->fetch()) {
         $toDelete = new Animaux();
         $toDelete->setIdAnimal($donnees['id_animal']);
-        var_dump($donnees);
-        echo $donnees['id_animal'] . "<br>";
-        echo $donnees['nom'] . "<br>";
+        $avatar = $donnees['avatar'];
+        $nom = $donnees['nom'];
+        $couleur = $donnees['couleur'];
+        $origines = $donnees['origines'];
+        $nom_race = $donnees['nom_race'];
+
+        include('../views/cardAnimaux.php');
         $toDelete->deleteOne();
-        echo "ok";
+        echo '<h1 class="messageDelete">Votre '. $donnees['nom']. ' a bien était supprimé !</h1>';
     };
+    echo '</div>';
 
 }
 

@@ -5,6 +5,8 @@ class Animaux {
     private $idAnimal;
     private $nom;
     private $couleur;
+    private $origines;
+    private $avatar;
     private $idRace;
 
     //attribue de stockage info de connexion bdd
@@ -30,6 +32,14 @@ class Animaux {
         return $this->couleur;
     }
 
+    public function getOriginesAnimal(){
+        return $this->origines;
+    }
+
+    public function getAvatar(){
+        return $this->avatar;
+    }
+
     public function getIdRace(){
         return $this->idRace;
     }
@@ -47,6 +57,14 @@ class Animaux {
         $this->couleur = $newColor;
     }
 
+    public function setOrigines($newOrigines){
+        $this->origines = $newOrigines;
+    }
+
+    public function setAvatar($newAvatar){
+        $this->avatar = $newAvatar;
+    }
+    
     public function setIdRace($newIdRace){
         $this->idRace = $newIdRace;
     }
@@ -87,10 +105,15 @@ class Animaux {
                     SET 
                         nom = :nom,
                         couleur = :couleur,
+                        origines = :origines,
+                        avatar = :avatar,
                         id_race = :idRace';
+
         $stmt = $this->connect->prepare($myQuery);
         $stmt->bindParam(':nom', $this->nom);
         $stmt->bindParam(':couleur', $this->couleur);
+        $stmt->bindParam(':origines', $this->origines);
+        $stmt->bindParam(':avatar', $this->avatar);
         $stmt->bindParam(':idRace', $this->idRace);
         return $stmt->execute();
     }
@@ -100,14 +123,18 @@ class Animaux {
                     SET 
                         nom = :nom,
                         couleur = :couleur,
-                        id_race = :IdRace
+                        origines =:origines,
+                        avatar = :avatar,
+                        id_race = :idRace
                     WHERE 
                         id_animal = :idAnimal';
         $stmt = $this->connect->prepare($myQuery);
+        $stmt->bindParam(':idAnimal', $this->idAnimal);
         $stmt->bindParam(':nom', $this->nom);
         $stmt->bindParam(':couleur', $this->couleur);
+        $stmt->bindParam(':origines', $this->origines);
+        $stmt->bindParam(':avatar', $this->avatar);
         $stmt->bindParam(':idRace', $this->idRace);
-        $stmt->bindParam(':idAnimal', $this->idAnimal);
         return $stmt->execute();
     }
 

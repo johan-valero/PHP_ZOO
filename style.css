@@ -26,29 +26,35 @@ body{
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-delay: 1s;
-    background-color: #85c9994d;
+    /* background-color: #85c9994d; */
+    background-color: #0e161be0;
 }
 
 .right {
     flex: 1;
     background-color: black;
     transition: 1s;
-    background-image: url("https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_1280.jpg");
+    background-image: url("https://images2.imgbox.com/d5/d3/EPKgqyNE_o.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.header h1{
-    color: #0d4d22;
+h1{
+    color: #cd701c;
     font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 3px #333;
 }
+
 
 .header h2 {
     margin-top: 10px;
     font-weight: normal;
     font-size: 15px;
-    color: rgba(0,0,0,.4);
+    color: #cd6f1c88;
     margin-bottom: 10px;
 }
 
@@ -61,7 +67,7 @@ form {
 /* ----------------Bouton * ------------------ */
 
 form button{
-background-image: linear-gradient(to right, #1c6331  0%, #cebe62   51%, #1c6331   100%);
+background-image: linear-gradient(to right, #cd701c  0%, #cebe62   51%, #cd701c   100%);
 margin: 10px;
 width: 340px;
 border: 0;
@@ -69,15 +75,15 @@ padding: 12px 10px;
 text-align: center;
 text-transform: uppercase;
 transition: 0.5s;
-background-size: 200% auto;
-color: white;            
+background-size: 200% auto;           
 border-radius: 3px;
 font-weight: 500;
-/* display: block; */
 letter-spacing: 2px;
 font-family: 'Noto Serif Display', serif;
-cursor: pointer
+color: #fff;
+cursor: pointer;
 }
+
 
 form button:hover {
 background-position: right center;
@@ -145,71 +151,70 @@ text-decoration: none;
     }
 }
 
-/* -----------------footer--------------- */
+/* -----------------header--------------- */
 
-#footer{
+.containerNav{
     display: flex;
     flex-direction: row;
-    position: fixed;
-    bottom: 0;
-    left: 30%;
-    right: 30%;
+    justify-content: center;
+    align-items: center;
 }
 
-/* -----------------header All view--------------- */
+.containerNav .logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+.menuBar{
+    display: flex;
+    flex-direction: row;
+    color: #cd701c;
+    list-style-type: none;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    height: 50px;
+}
+
+.menuBar li a{
+    color: #cd701c;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.menuBar li a:hover{
+    background-image: linear-gradient(to right, #cd701c  0%, #cebe62   51%, #cd701c   100%);
+    transition: 0.5s;           
+    border-radius: 3px;
+    color: #fff;
+}
+
+/* -----------------header Allview page--------------- */
 
 .headerAllView{
     text-align: center;
+    height: 250px;
 }
 
-.headerAllView h2{
+h2{
     margin-top: 35px;
-}
-
-.boxAnimauxRaces{
-    display: flex;
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-}
-
-.itemsAnimauxRaces{
-    border: #0d4d22 2px solid;
-    width: 200px;
-    height: 400px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.categorieAnimale{
-    text-align: center;
-    color: #0d4d22;
-}
-
-.nomAnimal{
-    color: #cd701c;
-    font-weight: 600;
-    font-size: 25px;
-    text-decoration: underline;
-}
-
-.infoAnimaux{
-    color: #cd701c;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.imageAnimaux{
-    width: 164px;
-    height: 298px;
-    max-height: 200px;
 }
 
 /* ---------------Get all view page ------------------- */
 
-input[type="text"]{
+input[type="text"],
+#avatar{
     height: 46px;
     padding: 0 16px;
     border: 2px solid rgba(54, 50, 50, 0.384);
@@ -217,10 +222,14 @@ input[type="text"]{
     outline: 0;
     transition: .2s;
     width: 340px;
+    color: #cd701c;
+    background: #697b8693;
+
 }
 
-input[type="text"]:focus {
-    border-color: #0d4d22;
+input[type="text"]:focus,
+#avatar:focus{
+    border-color: #cd701c;
     transition: 0.6s ease-in-out;
 }
 
@@ -236,5 +245,178 @@ input[placeholder]{
 
 #form_text label{
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #cd701c;
+}
+
+/* --------------------input selec---------------------- */
+
+#race{
+    height: 46px;
+    padding: 0 16px;
+    border: 2px solid rgba(54, 50, 50, 0.384);
+    border-radius: 4px;
+    outline: 0;
+    transition: .2s;
+    width: 340px;
+}
+#race option{
+    font-family: 'Noto Serif Display', serif;
+}
+
+#animal{
+    height: 46px;
+    padding: 0 16px;
+    border: 2px solid rgba(54, 50, 50, 0.384);
+    border-radius: 4px;
+    outline: 0;
+    transition: .2s;
+    width: 340px;
+}
+
+/* -------------------- Box hover---------------------- */
+.listeAnimauxBody{
+    background-image: url('https://images2.imgbox.com/39/a9/5LRz6ESs_o.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100%;
+}
+
+.resultatTitre{
+    font-size: 30px;
+    color: #cd701c;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 3px #333;
+}
+
+.boxAnimaux{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box{
+    margin: 5px;
+    width: 200px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.74);
+    overflow: hidden;
+    padding-bottom: 10px;
+    box-shadow: 0 19px 38px rgba(black, 0.3), 0 15px 12px rgba(black, 0.2);
+    margin-bottom: 50px;
+}
+
+.boxImage{
+    position: relative;
+}
+
+.boxImage img{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.boxDescription{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+}
+
+.boxDescription h5{
+    font-size: 30px;
+    color: #cd701c;
+    text-shadow: 3px 3px 3px #333;
+}
+
+.boxDescription p{
+    color: #cebe62;
+    font-size: 18px;
+    text-align: center;
+}
+
+.boxImage:hover,
+.boxImage:hover .boxDescription{
+    visibility: visible;
+    transition: all ease-in-out 0.6s;
+    animation: animation_box 0.5s;
+    
+}
+
+.boxImage:hover{
+    transform: scale(1.03);
+    transition: all ease-in-out 0.6s;
+}
+
+@keyframes animation_box{
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* ------------------------Formulaire AddOne--------------------------------- */
+.bodyAddOne{
+    background-image: url('https://images2.imgbox.com/75/18/ImkAEBE3_o.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.containerAddOne{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.addOneFormulaire{
+    width: 500px;
+    padding: 10px;
+    background-color: #0e161bda;
+}
+
+/* ------------------------deleteOne--------------------------------- */
+
+.bodyDeleteOne{
+    background-image: url('https://images2.imgbox.com/bb/32/mffKKytA_o.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.containerDeleteOne{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.deleteOneFormulaire{
+    width: 500px;
+    padding: 10px;
+    background-color: #0e161bda;
+}
+
+.messageDelete{
+    color: #cd701c;
+    font-size: 20px;
+    text-shadow: 3px 3px 3px #333;
 }

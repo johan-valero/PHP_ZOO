@@ -14,18 +14,17 @@
 </head>
 
 <?php
-include('../views/inc/footer.php')
+include('../views/inc/header.php')
 ?>
 
-<body>
+<body class="listeAnimauxBody">
     <div class="headerAllView">
-        <h1 class="animation a1">Liste des animaux</h1>
-        <form id="form_text" action="../controllers/getSingle.php" method="POST" class="animation a2">
-            <label for="nom">Un animal en particulier ?</label>
+        <h1>Liste des animaux</h1>
+        <form id="form_text" action="../controllers/getSingle.php" method="POST">
             <input type="text" name="nom" placeholder="Nom de l'animal" id="nom">
             <button type="submit" value="Valider">Rechercher</button>
+            <h2 class="resultatTitre">Resultats des recherches :</h2>
         </form> 
-        <h2 class="animation a2">Resultats des recherches :</h2>
     </div>
 </body>
 

@@ -14,17 +14,16 @@ if (
         $animaux = new Animaux();
         $animaux->setNom($name);
         $res = $animaux->readSingleAll();
+        echo '<div class="boxAnimaux"> ';
         while($data = $res->fetch()) {
-            echo '<div class="boxAnimauxRaces"> ';    
-                echo '<div class="itemsAnimauxRaces"> ';
-                    echo '<h4 class="animation a3 nomAnimal">'. $data['nom']. '</h4>'.
-                        '<h4 class="animation a3 categorieAnimale"> Couleur : </h4>'. '<h5 class="infoAnimaux animation a3">'. $data['couleur']. '</h5>' . 
-                        '<h4 class="animation a3 categorieAnimale"> Origines : </h4>'. '<h5 class="infoAnimaux animation a3">'. $data['origines']. '</h5>' . 
-                        '<h4 class="animation a3 categorieAnimale"> Races : </h4>'. '<h5 class="infoAnimaux animation a3">'. $data['nom_race']. '</h5><br>';
-                echo '</div>';
-            echo '</div>';
-}
-
+        $avatar = $data['avatar'];
+        $nom = $data['nom'];
+        $couleur = $data['couleur'];
+        $origines = $data['origines'];
+        $nom_race = $data['nom_race'];
+        include('../views/cardAnimaux.php');
+        }
+        echo '</div>';
     }catch(Exception $e){
         die('Erreur : ' . $e->getMessage());
     }
