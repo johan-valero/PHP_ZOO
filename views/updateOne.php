@@ -11,7 +11,8 @@
     <script src="https://kit.fontawesome.com/8e8d5e63b3.js"></script>
     <title>Update One</title>
 </head>
-<body>
+<body class="bodyUpOne">
+
     
     <?php
         include('../views/inc/header.php');

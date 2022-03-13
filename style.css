@@ -250,21 +250,11 @@ input[placeholder]{
     color: #cd701c;
 }
 
-/* --------------------input selec---------------------- */
+/* --------------------input select---------------------- */
 
-#race{
-    height: 46px;
-    padding: 0 16px;
-    border: 2px solid rgba(54, 50, 50, 0.384);
-    border-radius: 4px;
-    outline: 0;
-    transition: .2s;
-    width: 340px;
-}
-#race option{
-    font-family: 'Noto Serif Display', serif;
-}
-
+#race,
+#idRace,
+#idAnimal,
 #animal{
     height: 46px;
     padding: 0 16px;
@@ -274,6 +264,21 @@ input[placeholder]{
     transition: .2s;
     width: 340px;
 }
+
+#race option{
+    font-family: 'Noto Serif Display', serif;
+}
+
+/* #animal{
+    height: 46px;
+    padding: 0 16px;
+    border: 2px solid rgba(54, 50, 50, 0.384);
+    border-radius: 4px;
+    outline: 0;
+    transition: .2s;
+    width: 340px;
+} */
+
 
 /* -------------------- Box hover---------------------- */
 .listeAnimauxBody{
@@ -372,6 +377,7 @@ input[placeholder]{
 }
 
 /* ------------------------Formulaire AddOne--------------------------------- */
+
 .bodyAddOne{
     background-image: url('https://images2.imgbox.com/75/18/ImkAEBE3_o.jpg');
     background-repeat: no-repeat;
@@ -379,6 +385,7 @@ input[placeholder]{
     background-size: cover;
     height: 100vh;
 }
+
 .containerAddOne{
     display: flex;
     justify-content: center;
@@ -389,6 +396,33 @@ input[placeholder]{
     width: 500px;
     padding: 10px;
     background-color: #0e161bda;
+}
+
+/* ------------------------Formulaire UpOne--------------------------------- */
+.bodyUpOne{
+    background-image: url('https://images2.imgbox.com/cb/93/Ay655tMs_o.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.containerUpOne{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.UpOneFormulaire{
+    width: 500px;
+    padding: 10px;
+    background-color: #0e161bda;
+}
+
+h6 {
+text-align: center;
+font-weight: 25px;
+color: #cd701c;
 }
 
 /* ------------------------deleteOne--------------------------------- */

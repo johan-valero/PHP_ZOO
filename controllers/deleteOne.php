@@ -23,7 +23,7 @@ if (!empty($_POST['name'])){
 
         include('../views/cardAnimaux.php');
         $toDelete->deleteOne();
-        echo '<h1 class="messageDelete">Votre '. $donnees['nom']. ' a bien était supprimé !</h1>';
+        echo '<h1 class="messageDelete">Votre '. $donnees['nom']. ' a bien été supprimé !</h1>';
     };
     echo '</div>';
 

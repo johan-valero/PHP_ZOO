@@ -1,6 +1,4 @@
 <?php
-// include('../models/animaux.php');
-// include('../config/bdd.php');
 include('../controllers/getAllAll.php');
 
 if (
@@ -16,7 +14,6 @@ if (
     $race = intval($_POST['race'],10);
     $avatar = $_POST['avatar'];
     
-    
     try{
         $animaux = new Animaux();
         $animaux->setNom($nom);
@@ -28,11 +25,10 @@ if (
 
         include('../views/cardAnimaux.php');
         
-
     } catch (Exception $e){
         die('Erreur : ' . $e->getMessage());
     }
-
+    
 }
     
 ?>

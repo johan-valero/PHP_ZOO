@@ -35,8 +35,8 @@
                         <option value="3">Oiseaux</option>
                         <option value="4">Primates</option>
                         <option value="5">Poissons</option>
-                        <option value="3">Chiens</option>
-                        <option value="3">Chats</option>
+                        <option value="6">Chiens</option>
+                        <option value="7">Chats</option>
                     </select>
                     <label for="avatar">Ajouter une image:</label>
                     <input type="url" id="avatar" name="avatar" accept="image/png, image/jpeg" placeholder="URL de l'image" required>
