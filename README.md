@@ -1,5 +1,5 @@
-# Animaux & Co
-# Teddy Adeline Johan
+# ===================================== Animaux & Co =====================================
+# ================================= Teddy Adeline Johan =================================
 
 ![1](https://user-images.githubusercontent.com/81682245/158141582-aea7c375-bd68-431e-a064-e4ed91228f50.JPG)
 ![2](https://user-images.githubusercontent.com/81682245/158141600-43843ad6-ddf1-4a53-b941-ab1e95981fc0.JPG)
